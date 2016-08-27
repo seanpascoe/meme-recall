@@ -1,3 +1,7 @@
 body {
   background-color: #eeeeee;
 }
+
+.memeForm input {
+  margin-top: 25px;
+}

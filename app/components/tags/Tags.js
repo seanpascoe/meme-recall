@@ -8,6 +8,7 @@ class Tags extends React.Component {
   constructor(props) {
     super(props)
     this.addTagToDOM = this.addTagToDOM.bind(this);
+    this.deleteTag = this.deleteTag.bind(this);
     this.state = {tags: []};
   }
 
@@ -18,9 +19,12 @@ class Tags extends React.Component {
       dataType: 'JSON',
       data: {memeId: this.props.memeId}
     }).done(tags => {
-      console.log(tags);
       this.setState({ tags })
     });
+  }
+
+  deleteTag(id) {
+    this.setState({tags: this.state.tags.filter(t => t._id !== id)});
   }
 
   addTagToDOM(tag) {
@@ -29,7 +33,7 @@ class Tags extends React.Component {
 
   render() {
     let tags = this.state.tags.map(tag => {
-        return(<Tag key={tag._id} tagName={tag.tagName} memeId={tag.memeId} />);
+        return(<Tag key={tag._id} id={tag._id} tagName={tag.tagName} memeId={tag.memeId} deleteTag={this.deleteTag} />);
     });
 
     return (
@@ -37,7 +41,6 @@ class Tags extends React.Component {
         <TagForm addTagToDOM={this.addTagToDOM} memeId={this.props.memeId} />
         <div>
           {tags}
-          <span className="chip"><i className="close material-icons">close</i></span>
         </div>
       </div>
     )

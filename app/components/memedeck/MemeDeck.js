@@ -42,7 +42,6 @@ class MemeDeck extends React.Component {
         <MemeSearch />
         <div className="row">
           {memes}
-          <Meme memeURL="http://memeblender.com/wp-content/uploads/2012/12/indestructible-nokia-SWAT-team-standard-issue.jpg" tags="indestructible"/>
         </div>
       </div>
     )

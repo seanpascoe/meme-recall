@@ -19,4 +19,11 @@ router.post('/', function(req, res, next) {
   });
 });
 
+router.delete('/:id', function(req, res) {
+  Tag.findById(req.params.id, function(err, tag) {
+    tag.remove();
+    res.status(200).send({success: true});
+  });
+});
+
 module.exports = router;

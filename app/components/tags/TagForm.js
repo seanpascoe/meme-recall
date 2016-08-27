@@ -25,7 +25,7 @@ class TagForm extends React.Component {
 
   render() {
     let style = {
-      form: {color: "white"}
+      form: {color: "white", paddingBottom: "10px"}
     }
 
     return (

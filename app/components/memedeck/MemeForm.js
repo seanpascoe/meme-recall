@@ -31,7 +31,7 @@ class MemeForm extends React.Component {
     return (
       // <div className={this.props.showSongForm}>
       <div>
-        <div className="subSongForm container">
+        <div className="memeForm container">
           <form ref="songForm" onSubmit={this.addMemeToDB}>
             <input
               type="text"
