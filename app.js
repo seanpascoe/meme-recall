@@ -8,6 +8,8 @@ var mongoose = require('mongoose');
 mongoose.connect( 'mongodb://localhost/total-meme-recall' );
 
 var routes = require('./routes/index');
+var memes = require('./routes/memes');
+var tags = require('./routes/tags');
 
 
 var app = express();
@@ -35,6 +37,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/memes', memes);
+app.use('/tags', tags);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
