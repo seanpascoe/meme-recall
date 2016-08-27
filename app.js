@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-mongoose.connect( 'mongodb://localhost/bucket-list' );
+mongoose.connect( 'mongodb://localhost/total-meme-recall' );
 
 var routes = require('./routes/index');
 

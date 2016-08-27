@@ -1,6 +1,6 @@
 import React from 'react';
 
-class BucketForm extends React.Component {
+class MemeSearch extends React.Component {
   constructor(props) {
     super(props)
     this.state = { }
@@ -11,7 +11,7 @@ class BucketForm extends React.Component {
       <div className="row">
         <form className="col s12">
           <div className="input-field">
-            <input type="text" placeholder="Bucket Name..."/>
+            <input type="text" placeholder="Search tags..."/>
           </div>
         </form>
       </div>
@@ -19,4 +19,4 @@ class BucketForm extends React.Component {
   }
 }
 
-export default BucketForm;
+export default MemeSearch;

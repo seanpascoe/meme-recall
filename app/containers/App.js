@@ -1,9 +1,9 @@
 import React from 'react';
-import BucketPage from '../components/buckets/BucketPage';
+import MemeDeck from '../components/memedeck/MemeDeck';
 
 const App = () => (
   <div>
-    <BucketPage />
+    <MemeDeck />
   </div>
 );
 

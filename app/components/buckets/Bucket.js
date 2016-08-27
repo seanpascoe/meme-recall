@@ -10,10 +10,10 @@ const Bucket = (props) => {
 
   return (
     <div className="col s12 m4 l3">
-      <div style={style.card} className="card orange">
+      <div style={style.card} className="card blue">
         <div style={style.cardcontent} className="card-content white-text center">
           <p className="card-title">{props.title}</p>
-          <i className="large material-icons orange-text text-lighten-4">{props.icon_name}</i>
+          <i className="large material-icons blue-text text-lighten-4">{props.icon_name}</i>
         </div>
         <div style={style.cardaction} className="card-action center">
           <a style={style.anchors} className="white-text" href="#">Show</a>
